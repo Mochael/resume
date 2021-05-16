@@ -95,15 +95,19 @@ arc=0pt,outer arc=0pt, fontupper=\large}
 \AddToShipoutPicture* %515,738
 	{\put(515,738){\includegraphics[width=2.25cm,height=1.5cm]{logoGreen.png}}}
 
+% \begin{tikzpicture}[remember picture,overlay]
+% 	\clip ($(current page text area.north east)!0.64!(current page text area.south east)!.925!(current page text area.north west)$)
+% 		circle (1.5cm) node {\includegraphics[width=0.2\linewidth]{myPic.jpg}};
+% 	\end{tikzpicture}
 \begin{tikzpicture}[remember picture,overlay]
-	\clip ($(current page text area.north east)!0.64!(current page text area.south east)!.925!(current page text area.north west)$)
-		circle (1.5cm) node {\includegraphics[width=0.2\linewidth]{myPic.jpg}};
+	\clip ($(current page text area.north east)!0.75!(current page text area.south east)!.95!(current page text area.north west)$)
+		circle (0.87cm) node {\includegraphics[width=0.125\linewidth]{myPic.jpg}};
 	\end{tikzpicture}
 
 
-\hspace{1.2in} \textbf{\huge Michael E.} \\
+\hspace{0.825in} \textbf{\huge Michael E.} \\
 \vspace{6pt}
-\hspace{1.2in} \textbf{\Huge \textcolor{myGreen}{Kronovet}}
+\hspace{0.825in} \textbf{\Huge \textcolor{myGreen}{Kronovet}}
 
 % was 7.45in
 %\begin{tabular*}{5.5in}{l@{\extracolsep{\fill}}r}

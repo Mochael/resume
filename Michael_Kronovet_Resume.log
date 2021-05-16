@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.10)  15 MAY 2021 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.10)  15 MAY 2021 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -537,38 +537,38 @@ LaTeX Info: Redefining \nameref on input line 92.
 <myPic.jpg, id=7, 956.57375pt x 961.5925pt>
 File: myPic.jpg Graphic file (type jpg)
 <use myPic.jpg>
-Package pdftex.def Info: myPic.jpg  used on input line 100.
-(pdftex.def)             Requested size: 108.40334pt x 108.95947pt.
+Package pdftex.def Info: myPic.jpg  used on input line 104.
+(pdftex.def)             Requested size: 67.75311pt x 68.096pt.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 104.
+(Font)              scaled to size 10.95pt on input line 108.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 20.74pt on input line 104.
+(Font)              scaled to size 20.74pt on input line 108.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 106.
+(Font)              scaled to size 24.88pt on input line 110.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 114.
+(Font)              scaled to size 17.28pt on input line 118.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 124.
+(Font)              scaled to size 12.0pt on input line 128.
 LaTeX Font Info:    Font shape `T1/zpltlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 125.
+(Font)              scaled to size 12.0pt on input line 129.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 135.
+(Font)              <10.95> on input line 139.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 135.
+(Font)              <8> on input line 139.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 135.
+(Font)              <6> on input line 139.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 138.
-LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input line 163.
+(Font)              scaled to size 10.95pt on input line 142.
+LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input line 167.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 163.
+(Font)              scaled to size 10.95pt on input line 167.
 <logoGreen.png, id=11, 1284.8pt x 803.0pt>
 File: logoGreen.png Graphic file (type png)
 <use logoGreen.png>
-Package pdftex.def Info: logoGreen.png  used on input line 243.
+Package pdftex.def Info: logoGreen.png  used on input line 247.
 (pdftex.def)             Requested size: 64.0085pt x 42.67642pt.
  [1
 
@@ -577,15 +577,15 @@ Package rerunfilecheck Info: File `Michael_Kronovet_Resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22880 strings out of 478994
- 447283 string characters out of 5858184
+ 22878 strings out of 478994
+ 447230 string characters out of 5858184
  764671 words of memory out of 5000000
- 39991 multiletter control sequences out of 15000+600000
+ 39989 multiletter control sequences out of 15000+600000
  430002 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,10n,88p,468b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on /Users/michaelkronovet/Desktop/resume/Michael_Kronovet_Resume.pdf (1 page, 373821 bytes).
+Output written on /Users/michaelkronovet/Desktop/resume/Michael_Kronovet_Resume.pdf (1 page, 373820 bytes).
 PDF statistics:
  41 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream
