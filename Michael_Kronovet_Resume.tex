@@ -24,6 +24,8 @@
 \usepackage{eso-pic}
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
 \usetikzlibrary{calc}
 
 
@@ -31,8 +33,8 @@
 %Edit these values as you see fit
 
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+% \definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+% \definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
 % Trying out new colors
 \definecolor{myGreen}{RGB}{97, 191, 97}
@@ -67,7 +69,13 @@
 }
 % [5] controls the number of elements
 % {6.8in} controls the spacing between CMU and the Graduation Date
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
+
+\newtcolorbox{mybox}{enhanced, frame hidden, borderline west = {3pt}{0pt}{black},
+skin=bicolor,interior style={left color=myGreen!75,right color=white},
+arc=0pt,outer arc=0pt, fontupper=\large}
 
 \newcommand{\ressubheading}[5]{
 \begin{tabular*}{6.8in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
@@ -77,6 +85,8 @@
 		\textit{#5} \\
 \end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
+
+\usepackage{newpxtext}
 
 
 \begin{document}
@@ -90,14 +100,6 @@
 		circle (1.5cm) node {\includegraphics[width=0.2\linewidth]{myPic.jpg}};
 	\end{tikzpicture}
 
-	% \begin{tikzpicture}[remember picture,overlay]
-	% 	\put(1,-90){\includegraphics[width=0.15\linewidth]{myEdit.png}};
-	% 	\end{tikzpicture}
-
-	% \begin{tikzpicture}[remember picture,overlay]
-	% 	\put(56,-69){\includegraphics[width=0.30\linewidth]{textBub2.png}};
-	% 	\end{tikzpicture}
-
 
 \hspace{1.2in} \textbf{\huge Michael E.} \\
 \vspace{6pt}
@@ -109,16 +111,19 @@
 %\hspace{2in} \href{https://github.com/Mochael}{Github: Mochael} & \href{https://michaelkronovet.com}{michaelkronovet.com} \\
 %\hspace{2in} \href{https://www.linkedin.com/in/michael-kronovet}{LinkedIn: michael-kronovet} &  mkronove@andrew.cmu.edu \\
 \vspace{-0.45in}  %5.2 to 4.8 and 4.29
-\hspace{4.8in} \href{https://michaelkronovet.com}{\textbf{ \textcolor{myGreen}{michaelkronovet.com}}} \\
-\vspace{0.01in}
-\hspace{4.68in}  \textbf{mkronovet@gmail.com} \\
-\vspace{0.05in}
+\hspace{4.05in} \raisebox{5pt}[\height][\depth]{\href{https://michaelkronovet.com}{\textbf{\LARGE \textcolor{myGreen}{michaelkronovet.com}}}} \\
+% \vspace{0.01in}
+\hspace{3.9in}  \raisebox{-4pt}[\height][\depth]{\textbf{\LARGE mkronovet@gmail.com}} \\
+% \vspace{0.05in}
 %\end{tabular*}
 %\\
 
 %\itemsep0em USED FOR SPACINIG BETWEEN LINES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\resheading{Education}
+% \resheading{Education}
+\begin{mybox}
+	\hspace{-8pt} \textbf{Education}
+\end{mybox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{itemize}[leftmargin=10]
 
@@ -143,7 +148,11 @@
 %\vspace{-8pt}
 \vspace{-10pt}
 
-\resheading{Work Experience}
+% \resheading{Work Experience}
+\begin{mybox}
+	\hspace{-8pt} \textbf{Work Experience}
+\end{mybox}
+
 \vspace{-6pt}
 \begin{enumerate}[leftmargin=10pt]
 	\item[] \textbf{Data Scientist at \textcolor{myGreen}{Foundry.ai}} \cftdotfill{\cftdotsep} August 2020--\\
@@ -177,9 +186,12 @@
 %\vspace{-6pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Projects}
+% \resheading{Projects}
+\begin{mybox}
+	\hspace{-8pt} \textbf{Projects}
+\end{mybox}
 
-\textbf{\textcolor{myGreen}{Learn more about my projects on}} \hspace{-6pt} \href{https://michaelkronovet.com}{\textbf{ \textcolor{myGreen}{michaelkronovet.com}}}
+% \textbf{\textcolor{myGreen}{Learn more about my projects on}} \hspace{-6pt} \href{https://michaelkronovet.com}{\textbf{ \textcolor{myGreen}{michaelkronovet.com}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-5pt}
@@ -215,7 +227,11 @@
 %\vspace{-6pt}
 \vspace{-10pt}
 
-\resheading{Skills}
+% \resheading{Skills}
+\begin{mybox}
+	\hspace{-8pt} \textbf{Skills}
+\end{mybox}
+
 \vspace{-5pt}
 	\begin{enumerate}[leftmargin=10pt]
 		\itemsep0em
@@ -223,6 +239,5 @@
 		\item[] \textbf{Software/Frameworks}: Git, React, Django, Jekyll, Docker, Figma, CAD, Unity, Microsoft Excel
 		
 	\end{enumerate}
-
 
 \end{document}
