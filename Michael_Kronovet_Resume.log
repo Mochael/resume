@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.10)  31 DEC 2021 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.4.10)  7 FEB 2022 22:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,14 +552,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 143.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/it' will be
 (Font)              scaled to size 10.95pt on input line 146.
-LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input line 169.
+LaTeX Font Info:    Trying to load font information for TS1+zpltlf on input line 175.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/newpx/ts1zpltlf.fd
 File: ts1zpltlf.fd 2015/01/18 v1.0 fd file for TS1/zpltlf
 )
 LaTeX Font Info:    Font shape `TS1/zpltlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 169.
+(Font)              scaled to size 10.95pt on input line 175.
 LaTeX Font Info:    Font shape `T1/zpltlf/m/n' will be
-(Font)              scaled to size 10.5pt on input line 204.
+(Font)              scaled to size 10.5pt on input line 216.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/michaelkronovet/Desktop/resume/Michael_Kronovet_Resume.aux)
@@ -575,7 +575,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  87i,7n,88p,468b,887s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/newpx/zplb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/newpx/zplr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/newpx/zplri.pfb>
-Output written on /Users/michaelkronovet/Desktop/resume/Michael_Kronovet_Resume.pdf (1 page, 122099 bytes).
+Output written on /Users/michaelkronovet/Desktop/resume/Michael_Kronovet_Resume.pdf (1 page, 122067 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  29 compressed objects within 1 object stream
