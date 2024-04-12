@@ -8,6 +8,7 @@
 \usepackage{tocloft}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{eso-pic, rotating}
 
 
 
@@ -18,7 +19,7 @@
 \usepackage{tikzpagenodes}
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc, fadings}
 
 
 
@@ -29,6 +30,8 @@
 % Trying out new colors
 \definecolor{myGreen}{RGB}{97, 191, 97}
 \definecolor{myPurple}{RGB}{102, 0, 204}
+\definecolor{myBlue}{RGB}{0, 150, 255}
+
 
 %-----------------------------------------------------------
 %Margin setup
@@ -63,8 +66,12 @@
 \definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
 
+% \newtcolorbox{mybox}{enhanced, frame hidden,
+% skin=bicolor,interior style={left color=myBlue!15,right color=white},
+% arc=0pt,outer arc=0pt, fontupper=\LARGE}
+
 \newtcolorbox{mybox}{enhanced, frame hidden, borderline west = {3pt}{0pt}{black},
-skin=bicolor,interior style={left color=myGreen!75,right color=white},
+skin=bicolor,interior style={left color=myBlue!20,right color=white},
 arc=0pt,outer arc=0pt, fontupper=\large}
 
 \newcommand{\ressubheading}[5]{
@@ -85,142 +92,252 @@ arc=0pt,outer arc=0pt, fontupper=\large}
 % Putting Name on the left and my links on the right
 \begin{minipage}{.45\linewidth}
 	\begin{flushleft}
-		\textbf{\Huge Michael \textcolor{myGreen}{Kronovet}} \\
-		{\large \it Active TS Security Clearance}
+		\textbf{\Huge Michael \textcolor{myBlue}{Kronovet}} \\
+		{\large \it Active Top Secret Security Clearance}
 		\vspace{-8pt}
 	\end{flushleft}
 \end{minipage}
 \hfill
 \vspace{-23pt}
-% \begin{minipage}{.95\linewidth}
-	% \begin{flushright}
-	% 	\href{https://michaelkronovet.com}{\textbf{\Large \textcolor{myGreen}{michaelkronovet.com}}} \\
-	% 	\vspace{2pt}
-	% 	\hfill \textbf{\Large mkronovet@gmail.com}
-	% \end{flushright}
-% \end{minipage}
-\rightline{\href{https://michaelkronovet.com}{\textbf{\Large \textcolor{myGreen}{michaelkronovet.com}}}}
+
+\rightline{\href{https://michaelkronovet.com}{\textbf{\Large \textcolor{myBlue}{michaelkronovet.com}}}}
 \rightline{\textbf{\Large mkronovet@gmail.com}}
 \vspace{-.05in}
 
-\vspace{-0.18in}
+
+% % Header content
+% \vspace{0.14in}
+% \begin{table}
+% 	\centering
+% 	\begin{tabular}{c}
+% 		\textbf{\Huge Michael \textcolor{myBlue}{Kronovet}} \\
+% 		\Large \textit{Active TS security clearance} \\
+% 		\Large \textbf{\textcolor{myBlue}{michaelkronovet.com} | mkronovet@gmail.com}
+% 	\end{tabular}
+% \end{table}
+
+
+% \begin{mybox}
+% 	\hspace{-8pt} \textbf{\Large Work Experience}
+% \end{mybox}
+
+
+% \AddToShipoutPicture{\put(10,480){\rotatebox{90}{\scalebox{2.70}{\textcolor{myBlue}{Work experience}}}}}
+
+
+\newcommand{\gradient}{\noindent%
+    \begin{tikzpicture}
+    % \node at (.5\linewidth,0) {\bfseries #1};
+    \fill[myBlue,path fading=east] (0,-1em) rectangle (\linewidth,-1.5em);
+    \end{tikzpicture}%
+}
+
+\vspace{0.15in}
+% \textbf{\LARGE Work Experience}
+% \hline
 
 \begin{mybox}
-	\hspace{-8pt} \textbf{Education}
+	\hspace{-8pt} \textbf{\LARGE Work Experience}
 \end{mybox}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{itemize}[leftmargin=10]
+% \gradient
 
+% \vspace{-6pt}
 
-\vspace{-10pt}
 \begin{enumerate}[leftmargin=10pt]
-
-	\item[] \textbf{Carnegie Mellon University} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{August 2017 --} May 2020}\\
-	GPA: 3.76/4.00 \\
-	\textit{Bachelor of Science in Statistics and Machine Learning with University Honors} \\
-	\vspace{-0.3pt}
-
-	\vspace{-4pt}	
+	\item[] \textbf{\Large Palantir | \textcolor{myBlue}{Technical Lead}}  \cftdotfill{\cftdotsep} \large \textit{\textcolor{myBlue}{Apr 2022 --}}\\
+	\item[] \large Overseeing the entirety of Palantir's work with the State Department, team of 20+ people
 	\begin{itemize}
-		\resitem{Graduated in under 3 years}
-		\resitem{Probabilistic Graphical Models (PhD), Causal Inference (PhD), Algorithms \& Advanced Data Structures}
-	\end{itemize}
-	% \vspace{-0.01pt}
-	
-\end{enumerate}
-
-\vspace{-10pt}
-
-% \resheading{Work Experience}
-\begin{mybox}
-	\hspace{-8pt} \textbf{Work Experience}
-\end{mybox}
-
-\vspace{-6pt}
-\begin{enumerate}[leftmargin=10pt]
-	\item[] \textbf{Technical Lead at \textcolor{myGreen}{Palantir}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{April 2022 --}}\\
-	\vspace{-4pt}	
-	\begin{itemize}
-		\resitem{Led team of 20+ overseeing the technical development of Palantir's work at the US State Department.}
-	\end{itemize}
-
-	\item[] \textbf{Machine Learning Engineer at \textcolor{myGreen}{Curia.ai}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{August 2020 --} February 2022}\\
-	\vspace{-4pt}	
-	\begin{itemize}
-		\resitem{Curia had only 6 employees where my primary responsibility was to build the machine learning backend for all of Curia's products. Additionally, I performed causal inference research, built out AWS infrastructure, and explained models to clients.}
-	\end{itemize}
-	 
-	\item[] \textbf{Bioinformatics Engineering Intern at \textcolor{myGreen}{Regeneron}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{June 2020 --} August 2020}\\
-	\vspace{-4pt}	
-	\begin{itemize}
-		\resitem{Made a machine learning model to predict the exon skipping efficiency of antisense-oligonucleotides (ASOs) and then built a corresponding app to recommend optimal ASOs for specific exon skipping tasks.}	
-	\end{itemize}
-
-	\item[] \textbf{Teaching Assistant for \textcolor{myGreen}{10-701 Intro Machine Learning (PhD)}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{January 2020 --} May 2020}\\
-	\vspace{-4pt}
-	\begin{itemize}
-		\resitem{Led recitations, created homework problems, held office hours, and advised final projects for the PhD version of the intro to machine learning class at Carnegie Mellon.}
-	\end{itemize}
-
-	\item[] \textbf{Data Scientist and Engineer with \textcolor{myGreen}{Ikos}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{August 2019 --} December 2019}\\
-	\vspace{-4pt}	
-	\begin{itemize}
-		\resitem{Built and later sold (to Ikos) an app that would predict how much property rentals across Pittsburgh would rent for and how quickly they would rent.}	
-	\end{itemize}
-	
-	\item[] \textbf{Quantitative Trading Intern at \textcolor{myGreen}{Virtu Financial}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myGreen}{June 2019 --} August 2019}\\
-	\vspace{-4pt}
-	\begin{itemize}
-		\resitem{Worked on the algorithms team at a high frequency trading firm to predict Exchange Traded Fund (ETF) price fluctuations and alter trading strategies to profit from them.}
+		\resitem{Led integration of LLMs across the whole State Department, 75k people}
 	\end{itemize}
 \end{enumerate}
 
-\vspace{-10pt}
-%\vspace{-6pt}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \resheading{Projects}
-\begin{mybox}
-	\hspace{-8pt} \textbf{Projects}  \fontsize{10.5}{15}\selectfont   (A more extensive list is on my website)
-\end{mybox}
-
-% \textbf{\textcolor{myGreen}{Learn more about my projects on}} \hspace{-6pt} \href{https://michaelkronovet.com}{\textbf{ \textcolor{myGreen}{michaelkronovet.com}}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-5pt}
 \begin{enumerate}[leftmargin=10pt]
-\setlength\itemsep{1em}
-
-\item[] \href{https://whim.so/}{\textbf{Whim}}\\
-\vspace{-4pt}
-\begin{itemize}
-	\resitem{Built a lightweight, markdown WYSIWYG note taking app that is designed to help you write modular notes which reference each other to aid with knowledge retention.}
-\end{itemize}
-
-\vspace{-12pt}
-
-\item[] \textbf{Time Varying Graphs with NOTEARS}\\
-\vspace{-4pt}
-\begin{itemize}
-	\resitem{Adapted a state of the art DAG structure estimation algorithm to build dynamic bayesian networks with time series data.}
-\end{itemize}
-
+	\item[] \textbf{\Large Startup with 6 employees | \textcolor{myBlue}{Machine Learning Engineer}}  \cftdotfill{\cftdotsep} \large \textit{\textcolor{myBlue}{Aug 2020 --} Feb 2022}\\
+	\item[] \large Built the machine learning backend for Curia.ai from scratch
+	\begin{itemize}
+		\resitem{Created novel causal inference algorithms for evaluating patient health}
+	\end{itemize}
 \end{enumerate}
 
-%\vspace{-6pt}
-\vspace{-10pt}
+\begin{enumerate}[leftmargin=10pt]
+	\item[] \textbf{\Large PhD Intro to Machine Learning | \textcolor{myBlue}{Teaching Assistant}}  \cftdotfill{\cftdotsep} \large \textit{\textcolor{myBlue}{Jan 2020 --} May 2020}\\
+	\item[] \large Advised students for 10-701, the PhD Intro to ML class, during my 3rd year as an undergrad
+\end{enumerate}
 
-% \resheading{Skills}
+\begin{enumerate}[leftmargin=10pt]
+	\item[] \textbf{\Large Small Pittsburgh startup | \textcolor{myBlue}{Entrepreneur}}  \cftdotfill{\cftdotsep} \large \textit{\textcolor{myBlue}{Aug 2019 --} Dec 2019}\\
+	\item[] \large While in college sold a real estate app to a local Pittsburgh startup
+\end{enumerate}
+
+\begin{enumerate}[leftmargin=10pt]
+	\item[] \textbf{\Large Virtu Financial | \textcolor{myBlue}{Quant Trading Intern}}  \cftdotfill{\cftdotsep} \large \textit{\textcolor{myBlue}{Jun 2019 --} Aug 2019}\\
+	\item[] \large Analyzed Exchange Traded Funds (ETFs) at a high frequency trading firm
+\end{enumerate}
+
+% \vspace{0.1in}
+% \textbf{\LARGE Personal projects}
+% \hline
 \begin{mybox}
-	\hspace{-8pt} \textbf{Skills}
+	\hspace{-8pt} \textbf{\LARGE Personal projects}
 \end{mybox}
 
-\vspace{-5pt}
-	\begin{enumerate}[leftmargin=10pt]
-		\itemsep0em
-		\item[] \textbf{Languages}: Python, Typescript, R, SQL, C, Matlab
-		\item[] \textbf{Technologies}: Git, Docker, Spark, AWS, GCP, Figma, CAD, Unity, Microsoft Excel
-		
-	\end{enumerate}
+\begin{enumerate}[leftmargin=10pt]
+	\item[] \textbf{\Large Markdown editor | \textcolor{myBlue}{Travel blog} | DAG estimation | \textcolor{myBlue}{Muon tomography} | Etc}
+	\item[] \large Project details are on \href{https://michaelkronovet.com}{\textcolor{myBlue}{michaelkronovet.com}}
+
+\end{enumerate}
+% \begin{enumerate}[leftmargin=10pt]
+% 	\item[] \Large Project details are on michaelkronovet.com
+% \end{enumerate}
+
+
+% \vspace{0.1in}
+% \textbf{\LARGE Education}
+% \vspace{0.06in}
+% \hline
+\begin{mybox}
+	\hspace{-8pt} \textbf{\LARGE Education}
+\end{mybox}
+
+\begin{enumerate}[leftmargin=10pt]
+
+	\item[] \textbf{\Large Carnegie Mellon University | \textcolor{myBlue}{BS in Statistics and Machine Learning}} \\
+	\item[] \large \textit{\textcolor{myBlue}{August 2017 --} May 2020} \\
+	\item[] \large Graduated in < 3 years with University Honors
+	% \large \textit{Bachelor of Science in Statistics and Machine Learning with University Honors} \\
+\end{enumerate}
+
 
 \end{document}
+
+
+% \pagebreak
+
+% \begin{mybox}
+% 	\hspace{-8pt} \textbf{\Large Personal projects are on my website}
+% \end{mybox}
+
+% \begin{mybox}
+% 	\hspace{-8pt} \textbf{\Large Education}
+% \end{mybox}
+
+% \vspace{-10pt}
+% \begin{enumerate}[leftmargin=10pt]
+
+% 	\item[] \textbf{\Large Carnegie Mellon University} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{August 2017 --} May 2020}\\
+% 	\large Graduated in under 3 years \\
+% 	\large \textit{Bachelor of Science in Statistics and Machine Learning with University Honors} \\
+% \end{enumerate}
+
+
+
+
+
+
+
+
+
+% \begin{enumerate}[leftmargin=10pt]
+% 	\item[] \textbf{Technical Lead at \textcolor{myBlue}{Palantir}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{April 2022 --}}\\
+% 	\vspace{-4pt}	
+% 	\begin{itemize}
+% 		\resitem{Led team of 20+ overseeing the technical development of Palantir's work at the US State Department.}
+% 	\end{itemize}
+
+% 	\item[] \textbf{Machine Learning Engineer at \textcolor{myBlue}{Curia.ai}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{August 2020 --} February 2022}\\
+% 	\vspace{-4pt}	
+% 	\begin{itemize}
+% 		\resitem{Curia had only 6 employees where my primary responsibility was to build the machine learning backend for all of Curia's products. Additionally, I performed causal inference research, built out AWS infrastructure, and explained models to clients.}
+% 	\end{itemize}
+
+% 	\item[] \textbf{Teaching Assistant for \textcolor{myBlue}{10-701 Intro Machine Learning (PhD)}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{January 2020 --} May 2020}\\
+% 	\vspace{-4pt}
+% 	\begin{itemize}
+% 		\resitem{Led recitations, created homework problems, held office hours, and advised final projects for the PhD version of the intro to machine learning class at Carnegie Mellon.}
+% 	\end{itemize}
+
+% 	\item[] \textbf{Data Scientist and Engineer with \textcolor{myBlue}{Ikos}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{August 2019 --} December 2019}\\
+% 	\vspace{-4pt}	
+% 	\begin{itemize}
+% 		\resitem{Built and later sold (to Ikos) an app that would predict how much property rentals across Pittsburgh would rent for and how quickly they would rent.}	
+% 	\end{itemize}
+	
+% 	\item[] \textbf{Quantitative Trading Intern at \textcolor{myBlue}{Virtu Financial}} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{June 2019 --} August 2019}\\
+% 	\vspace{-4pt}
+% 	\begin{itemize}
+% 		\resitem{Worked on the algorithms team at a high frequency trading firm to predict Exchange Traded Fund (ETF) price fluctuations and alter trading strategies to profit from them.}
+% 	\end{itemize}
+% \end{enumerate}
+
+% \vspace{-10pt}
+
+% \begin{mybox}
+% 	\hspace{-8pt} \textbf{Education}
+% \end{mybox}
+
+% \vspace{-10pt}
+% \begin{enumerate}[leftmargin=10pt]
+
+% 	\item[] \textbf{Carnegie Mellon University} \cftdotfill{\cftdotsep} \textbf{\textcolor{myBlue}{August 2017 --} May 2020}\\
+% 	GPA: 3.76/4.00 \\
+% 	\textit{Bachelor of Science in Statistics and Machine Learning with University Honors} \\
+% 	\vspace{-0.3pt}
+
+% 	\vspace{-4pt}	
+% 	\begin{itemize}
+% 		\resitem{Graduated in under 3 years}
+% 		\resitem{Probabilistic Graphical Models (PhD), Causal Inference (PhD), Algorithms \& Advanced Data Structures}
+% 	\end{itemize}
+	
+% \end{enumerate}
+
+% \vspace{-10pt}
+
+% %\vspace{-6pt}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % \resheading{Projects}
+% \begin{mybox}
+% 	\hspace{-8pt} \textbf{Projects}  \fontsize{10.5}{15}\selectfont   (A more extensive list is on my website)
+% \end{mybox}
+
+% % \textbf{\textcolor{myBlue}{Learn more about my projects on}} \hspace{-6pt} \href{https://michaelkronovet.com}{\textbf{ \textcolor{myBlue}{michaelkronovet.com}}}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \vspace{-5pt}
+% \begin{enumerate}[leftmargin=10pt]
+% \setlength\itemsep{1em}
+
+% \item[] \href{https://whim.so/}{\textbf{Whim}}\\
+% \vspace{-4pt}
+% \begin{itemize}
+% 	\resitem{Built a lightweight, markdown WYSIWYG note taking app that is designed to help you write modular notes which reference each other to aid with knowledge retention.}
+% \end{itemize}
+
+% \vspace{-12pt}
+
+% \item[] \textbf{Time Varying Graphs with NOTEARS}\\
+% \vspace{-4pt}
+% \begin{itemize}
+% 	\resitem{Adapted a state of the art DAG structure estimation algorithm to build dynamic bayesian networks with time series data.}
+% \end{itemize}
+
+% \end{enumerate}
+
+% %\vspace{-6pt}
+% \vspace{-10pt}
+
+% % \resheading{Skills}
+% \begin{mybox}
+% 	\hspace{-8pt} \textbf{Skills}
+% \end{mybox}
+
+% \vspace{-5pt}
+% 	\begin{enumerate}[leftmargin=10pt]
+% 		\itemsep0em
+% 		\item[] \textbf{Languages}: Python, Typescript, R, SQL, C, Matlab
+% 		\item[] \textbf{Technologies}: Git, Docker, Spark, AWS, GCP, Figma, CAD, Unity, Microsoft Excel
+		
+% 	\end{enumerate}
+
+% \end{document}
